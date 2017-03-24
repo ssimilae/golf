@@ -35,7 +35,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
           window.open = cordova.InAppBrowser.open;
-            cordova.InAppBrowser.open('http://wingcom.iptime.org:8050', '_self', 'location=yes');
+            cordova.InAppBrowser.open('http://wingcom.iptime.org:8050', '_system', 'location=yes');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
