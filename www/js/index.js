@@ -33,56 +33,19 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        console.log('Received Device Ready Event');
-        console.log('calling setup push');
-        app.setupPush();
+        app.receivedEvent('deviceready');
+          window.open = cordova.InAppBrowser.open;
+            cordova.InAppBrowser.open('http://wingcom.iptime.org:8050', '_self', 'location=yes');
     },
-    setupPush: function() {
-        console.log('calling push init');
-        var push = PushNotification.init({
-            "android": {
-                "senderID": "AAAAL1VTZwE:APA91bFanD_m_H_cNSthDZ-NScYyRWSlOW_b8SeksGJDADUHz3IamIo3qLOAVZL8EAKCfY5zyafnNw4D2vdb4FRJLHhziFkL8MOi7-sZpHRTrT2oOh64ps9ZfBiATIHz1SKhLOkybkKn"
-            },
-            "browser": {},
-            "ios": {
-                "sound": true,
-                "vibration": true,
-                "badge": true
-            },
-            "windows": {}
-        });
-        console.log('after init');
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+        var parentElement = document.getElementById(id);
+        var listeningElement = parentElement.querySelector('.listening');
+        var receivedElement = parentElement.querySelector('.received');
 
-        push.on('registration', function(data) {
-            console.log('registration event: ' + data.registrationId);
+        listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');
 
-            var oldRegId = localStorage.getItem('registrationId');
-            if (oldRegId !== data.registrationId) {
-                // Save new registration ID
-                localStorage.setItem('registrationId', data.registrationId);
-                // Post registrationId to your app server as the value has changed
-            }
-
-            var parentElement = document.getElementById('registration');
-            var listeningElement = parentElement.querySelector('.waiting');
-            var receivedElement = parentElement.querySelector('.received');
-
-            listeningElement.setAttribute('style', 'display:none;');
-            receivedElement.setAttribute('style', 'display:block;');
-        });
-
-        push.on('error', function(e) {
-            console.log("push error = " + e.message);
-        });
-
-        push.on('notification', function(data) {
-            console.log('notification event');
-            navigator.notification.alert(
-                data.message,         // message
-                null,                 // callback
-                data.title,           // title
-                'Ok'                  // buttonName
-            );
-       });
+        console.log('Received Event: ' + id);
     }
 };
