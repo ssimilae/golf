@@ -27,14 +27,8 @@
  	<plugin name="cordova-plugin-fcm-config"  spec="https://github.com/ssimilae/fcm-config"/> 
 	<plugin name="cordova-plugin-fcm"  source="npm"/>
     
-    <platform name="android">
-<!--         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
-        <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
-        <icon density="hdpi" src="www/res/icon/android/drawable-hdpi-icon.png" />
-        <icon density="xhdpi" src="www/res/icon/android/drawable-xhdpi-icon.png" />
-        <icon density="xxhdpi" src="www/res/icon/android/drawable-xxhdpi-icon.png" />
-        <icon density="xxxhdpi" src="www/res/icon/android/drawable-xxxhdpi-icon.png" /> -->
-		  <icon density="ldpi" src="www/res/icon/android/golf.png" />
+    <platform name="android"> 
+		<icon density="ldpi" src="www/res/icon/android/golf.png" />
         <icon density="mdpi" src="www/res/icon/android/golf.png" />
         <icon density="hdpi" src="www/res/icon/android/golf.png" />
         <icon density="xhdpi" src="www/res/icon/android/golf.png" />
