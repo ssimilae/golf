@@ -60,8 +60,8 @@
  try
  {
 	
-cordova.exec(successFunction, errorFunction, "InAppBrowser", "open", ['http://wingcom.iptime.org:8050', '_system', 'location=yes']);
-//var ref = cordova.InAppBrowser.open('http://wingcom.iptime.org:8050', '_system', 'location=yes');
+//cordova.exec(successFunction, errorFunction, "InAppBrowser", "open", ['http://wingcom.iptime.org:8050', '_system', 'location=yes']);
+var ref = cordova.InAppBrowser.open('http://wingcom.iptime.org:8050', '_system', 'location=yes');
   }
  catch (e)
  {
