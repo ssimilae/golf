@@ -37,7 +37,7 @@ var app = {
 		{
 			 // app.receivedEvent('deviceready');
 			   window.open = cordova.InAppBrowser.open;
-			   cordova.InAppBrowser.open('http://wingcom.iptime.org:8050', '_blank', 'location=no');
+			   cordova.InAppBrowser.open('http://wingcom.iptime.org:8050', '_self', 'location=no');
 		}
 		catch (e)
 		{
