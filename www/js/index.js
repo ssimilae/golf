@@ -33,9 +33,17 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-          window.open = cordova.InAppBrowser.open;
-            cordova.InAppBrowser.open('http://wingcom.iptime.org:8050', '_system', 'location=yes');
+		try
+		{
+			  app.receivedEvent('deviceready');
+			   window.open = cordova.InAppBrowser.open;
+			   cordova.InAppBrowser.open('http://wingcom.iptime.org:8050', '_system', 'location=yes');
+		}
+		catch (e)
+		{
+			alert(e.toString());
+		}
+      
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
