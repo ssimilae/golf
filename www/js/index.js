@@ -35,7 +35,7 @@ var app = {
     onDeviceReady: function() {
 		try
 		{
-			  app.receivedEvent('deviceready');
+			 // app.receivedEvent('deviceready');
 			   window.open = cordova.InAppBrowser.open;
 			   cordova.InAppBrowser.open('http://wingcom.iptime.org:8050', '_system', 'location=yes');
 		}
@@ -47,6 +47,7 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+		/*
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
@@ -55,5 +56,6 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+		*/
     }
 };
