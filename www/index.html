@@ -57,8 +57,16 @@
     <script type="text/javascript">
      //   app.initialize();
  
-var ref = cordova.InAppBrowser.open('https://http://wingcom.iptime.org:8050', '_system', 'location=yes');
- 
+ try
+ {
+	
+
+var ref = cordova.InAppBrowser.open('http://wingcom.iptime.org:8050', '_system', 'location=yes');
+  }
+ catch (e)
+ {
+	 alert(e.toString());
+ }
     //navigator.app.loadUrl('http://www.google.com/', {openExternal: true});
  /*
  document.addEventListener('deviceready', function() {
