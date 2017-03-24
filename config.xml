@@ -23,6 +23,7 @@
 	<plugin name="cordova-plugin-inappbrowser" source="npm" spec="~1.3.0" />
 <!-- 
 	<plugin name="cordova-plugin-fcm-config" spec="cordova-plugin-fcm-config"  source="npm"/> -->
+	<plugin name="cordova-plugin-firebase" source="npm"/> 
 	<plugin name="cordova-plugin-fcm-config"  source="npm"/> 
 	<plugin name="cordova-plugin-fcm"  source="npm"/>
     
