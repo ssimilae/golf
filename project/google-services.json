@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "203294992129",
+    "firebase_url": "https://golfmanager-162404.firebaseio.com",
+    "project_id": "golfmanager-162404",
+    "storage_bucket": "golfmanager-162404.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203294992129:android:49abfb64a62a2353",
+        "android_client_info": {
+          "package_name": "com.golfmanager.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "203294992129-otukf917ih1mskut0hrb8ka2q3u1uerc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcf1ZB3mcwrhec6vOCaRUfTtJ-VfPva9M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
