@@ -37,8 +37,7 @@ var app = {
 		{
 			 // app.receivedEvent('deviceready');
 			 setupPush();
-			   window.open = cordova.InAppBrowser.open;
-			   cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
+			   
 		}
 		catch (e)
 		{
@@ -67,6 +66,10 @@ var app = {
         push.on('registration', function(data) {
 			alert(data.registrationId);
 			alert($(".app").html());
+
+			window.open = cordova.InAppBrowser.open;
+			   cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
+
             console.log('registration event: ' + data.registrationId);
 
             var oldRegId = localStorage.getItem('registrationId');
