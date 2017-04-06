@@ -37,6 +37,7 @@ var app = {
 		{
 			 // app.receivedEvent('deviceready');
 			 alert(1);
+
 			FCMPlugin.getToken(function(token){
     				alert( token );
 				alert('test2');
