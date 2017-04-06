@@ -36,7 +36,7 @@ var app = {
 		try
 		{
 			 // app.receivedEvent('deviceready');
-			 this.setupPush();
+			 app.setupPush();
 			   
 		}
 		catch (e)
