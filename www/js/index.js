@@ -36,8 +36,13 @@ var app = {
 		try
 		{
 			 // app.receivedEvent('deviceready');
-			 app.setupPush();
-			   
+
+			 FCMPlugin.onTokenRefresh(function(token){
+				alert( token );
+			});
+
+			   window.open = cordova.InAppBrowser.open;
+			   cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
 		}
 		catch (e)
 		{
@@ -45,71 +50,8 @@ var app = {
 		}
       
     },
-
-
-	 setupPush: function() {
-        console.log('calling push init');
-        var push = PushNotification.init({
-            "android": {
-                "senderID": "XXXXXXXX"
-            },
-            "browser": {},
-            "ios": {
-                "sound": true,
-                "vibration": true,
-                "badge": true
-            },
-            "windows": {}
-        });
-        console.log('after init');
-
-        push.on('registration', function(data) {
-			alert(data.registrationId);
-			alert($(".app").html());
-
-            console.log('registration event: ' + data.registrationId);
-
-            var oldRegId = localStorage.getItem('registrationId');
-            if (oldRegId !== data.registrationId) {
-                // Save new registration ID
-                localStorage.setItem('registrationId', data.registrationId);
-                // Post registrationId to your app server as the value has changed
-            }
-			
-			/*
-            var parentElement = document.getElementById('registration');
-            var listeningElement = parentElement.querySelector('.waiting');
-            var receivedElement = parentElement.querySelector('.received');
-
-            listeningElement.setAttribute('style', 'display:none;');
-            receivedElement.setAttribute('style', 'display:block;');
-			*/
-
-			
-			window.open = cordova.InAppBrowser.open;
-			   cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
-
-
-        });
-
-        push.on('error', function(e) {
-            console.log("push error = " + e.message);
-        });
-
-        push.on('notification', function(data) {
-            console.log('notification event');
-            navigator.notification.alert(
-                data.message,         // message
-                null,                 // callback
-                data.title,           // title
-                'Ok'                  // buttonName
-            );
-       });
-    },
-
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-
 		/*
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
