@@ -36,6 +36,7 @@ var app = {
 		try
 		{
 			 // app.receivedEvent('deviceready');
+			 alert(1);
 			FCMPlugin.getToken(function(token){
     				alert( token );
 				alert('test2');
@@ -43,7 +44,7 @@ var app = {
 							   window.open = cordova.InAppBrowser.open;
 			   cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
 			});
-
+			alert(2);
 		
 
 		}
