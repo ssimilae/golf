@@ -35,9 +35,22 @@ var app = {
     onDeviceReady: function() {
 		try
 		{
-			 // app.receivedEvent('deviceready');
-			 alert(1);
 
+			alert(1);
+			FCMPlugin.getToken(function(token){
+    				alert( token );
+					alert('test2');
+
+					 window.open = cordova.InAppBrowser.open;
+					cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
+			});
+
+			 // app.receivedEvent('deviceready');
+			
+
+			   	 // app.receivedEvent('deviceready');
+		
+			 /*
 			FCMPlugin.getToken(function(token){
     				alert( token );
 				alert('test2');
@@ -46,7 +59,7 @@ var app = {
 			   cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
 			});
 			alert(2);
-		
+			*/
 
 		}
 		catch (e)
@@ -69,17 +82,3 @@ var app = {
 		*/
     }
 };
-
-
-/*
-alert(FCMPlugin);
-FCMPlugin.onTokenRefresh(function(token){
-				alert( token );
-				alert('test');
-
-							   window.open = cordova.InAppBrowser.open;
-			   cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
-
-);
-
-/
