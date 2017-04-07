@@ -39,6 +39,8 @@ var app = {
 			FCMPlugin.getToken(function(token){ 
 					
 					alert(token);
+
+					alert($(".app").html());
 					// FCM 토근 등록 
 					$.ajax({	
 							url: "http://teebox.co.kr/plugin/fcm/fcm_register_ajax.php?token="+token,
