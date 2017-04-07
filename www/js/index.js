@@ -55,6 +55,21 @@ var app = {
 					cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
 			});
 
+
+			FCMPlugin.onNotification(function(data){
+			
+				if(data.wasTapped){
+				  //Notification was received on device tray and tapped by the user.
+				  	alert(1);
+				  alert( JSON.stringify(data) );
+				}else{
+				  //Notification was received in foreground. Maybe the user needs to be notified.
+				  	alert(2);
+				  alert( JSON.stringify(data) );
+				}
+			});
+
+
 			 // app.receivedEvent('deviceready');
 			 
 		 
