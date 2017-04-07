@@ -55,7 +55,8 @@ var app = {
 					cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
 			});
 
-
+			
+			/*
 			FCMPlugin.onNotification(function(data){
 			
 				if(data.wasTapped){
@@ -68,6 +69,7 @@ var app = {
 				  alert( JSON.stringify(data) );
 				}
 			});
+			*/
 
 
 			 // app.receivedEvent('deviceready');
