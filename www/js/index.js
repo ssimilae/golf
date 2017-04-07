@@ -38,6 +38,7 @@ var app = {
  
 			FCMPlugin.getToken(function(token){ 
 					
+					alert(token);
 					// FCM 토근 등록 
 					$.ajax({	
 							url: "http://teebox.co.kr/plugin/fcm/fcm_register_ajax.php?token="+token,
@@ -53,20 +54,8 @@ var app = {
 			});
 
 			 // app.receivedEvent('deviceready');
-			
-
-			// app.receivedEvent('deviceready');
-		
-			 /*
-			FCMPlugin.getToken(function(token){
-    				alert( token );
-				alert('test2');
-
-							   window.open = cordova.InAppBrowser.open;
-			   cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
-			});
-			alert(2);
-			*/
+			 
+		 
 
 		}
 		catch (e)
