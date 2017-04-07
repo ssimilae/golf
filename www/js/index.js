@@ -56,7 +56,7 @@ var app = {
 			});
 
 			
-			/*
+		
 			FCMPlugin.onNotification(function(data){
 			
 				if(data.wasTapped){
@@ -69,7 +69,7 @@ var app = {
 				  alert( JSON.stringify(data) );
 				}
 			});
-			*/
+			
 
 
 			 // app.receivedEvent('deviceready');
