@@ -105,14 +105,14 @@ var app = {
 
 function Exit(){
 			  navigator.notification.confirm(
-				'Do you want to exit app?',  
+				'골프매니저 앱을 종료하시겠습니까?',  
 				function(i){
 					if(i==2)
 					 {
 					   navigator.app.exitApp(); //This will Close the App
 					 }
 				},              
-				'App Name',            
-				'Cancel,Exit'          
+				'골프매니저',            
+				'아니오,예'          
 			  );
  }
