@@ -38,7 +38,7 @@ var app = {
  
 			FCMPlugin.getToken(function(token){ 
 				
-					// FCM Åä±Ù µî·Ï 
+					// FCM í† ê·¼ ë“±ë¡ 
 					$.ajax({	
 							url: "http://teebox.co.kr/plugin/fcm/fcm_register_ajax.php?token="+token,
 						    type: "get",
@@ -49,7 +49,7 @@ var app = {
 					
 
 					setTimeout(function(){
-					// È¨ÆäÀÌÁö È£Ãâ 
+					// í™ˆí˜ì´ì§€ í˜¸ì¶œ 
 					window.open = cordova.InAppBrowser.open;
 					var ref = cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
 
@@ -105,12 +105,12 @@ var app = {
 
 function Exit(){
 			  navigator.notification.confirm(
-				'°ñÇÁ¸Å´ÏÀú ¾ÛÀ» Á¾·áÇÏ½Ã°Ú½À´Ï±î?',  
+				'ê³¨í”„ë§¤ë‹ˆì € ì•±ì„ ì¢…ë£Œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?',  
 				function(i){
 					if(i==1)
 					{
 							setTimeout(function(){
-							// È¨ÆäÀÌÁö È£Ãâ 
+							// í™ˆí˜ì´ì§€ í˜¸ì¶œ 
 							window.open = cordova.InAppBrowser.open;
 							var ref = cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
 
@@ -125,7 +125,7 @@ function Exit(){
 					   navigator.app.exitApp(); //This will Close the App
 					 }
 				},              
-				'°ñÇÁ¸Å´ÏÀú',            
-				'¾Æ´Ï¿À,¿¹'          
+				'ê³¨í”„ë§¤ë‹ˆì €',            
+				'ì•„ë‹ˆì˜¤,ì˜ˆ'          
 			  );
  }
