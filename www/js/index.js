@@ -37,10 +37,7 @@ var app = {
 		{
  
 			FCMPlugin.getToken(function(token){ 
-					
-					//alert(token);
-
-					//alert($(".app").html());
+				
 					// FCM 토근 등록 
 					$.ajax({	
 							url: "http://teebox.co.kr/plugin/fcm/fcm_register_ajax.php?token="+token,
@@ -49,10 +46,17 @@ var app = {
 							}
 							
 					});
+					
 
+					setTimeout(function(){
 					// 홈페이지 호출 
 					window.open = cordova.InAppBrowser.open;
-					cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
+					var ref = cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
+
+
+					ref.addEventListener('exit', function(event){  Exit(); });
+					},2000); 
+
 			});
 
 			
@@ -97,3 +101,18 @@ var app = {
 		*/
     }
 };
+
+
+function Exit(){
+			  navigator.notification.confirm(
+				'Do you want to exit app?',  
+				function(i){
+					if(i==2)
+					 {
+					   navigator.app.exitApp(); //This will Close the App
+					 }
+				},              
+				'App Name',            
+				'Cancel,Exit'          
+			  );
+ }
