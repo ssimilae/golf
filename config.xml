@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.golfmanager.android" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>1</name>
+    <name>골프매니저</name>
     <description>
-        2
+        골프매니저
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
@@ -26,7 +26,7 @@
 	<plugin name="cordova-plugin-fcm-config" spec="cordova-plugin-fcm-config"  source="npm"/> -->
 <!-- 	<plugin name="cordova-plugin-firebase" source="npm"/>  -->
 
-<plugin spec="https://github.com/jverlee/cordova-plugin-inappbrowser-camera.git" version="1.1.0" source="git" />
+<plugin name="cordova-plugin-inappbrowser"  spec="https://github.com/jverlee/cordova-plugin-inappbrowser-camera.git" />
 
  	<plugin name="cordova-plugin-fcm-config"  spec="https://github.com/ssimilae/fcm-config"/> 
 	<plugin name="cordova-plugin-fcm"  source="npm"/>
