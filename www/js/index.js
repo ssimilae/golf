@@ -107,6 +107,19 @@ function Exit(){
 			  navigator.notification.confirm(
 				'골프매니저 앱을 종료하시겠습니까?',  
 				function(i){
+					if(i==1)
+					{
+							setTimeout(function(){
+							// 홈페이지 호출 
+							window.open = cordova.InAppBrowser.open;
+							var ref = cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
+
+
+							ref.addEventListener('exit', function(event){  Exit(); });
+							},1000); 
+
+					}
+
 					if(i==2)
 					 {
 					   navigator.app.exitApp(); //This will Close the App
