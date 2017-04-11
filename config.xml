@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.golfmanager.android" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>GolfManager</name>
+    <name>골프매니저</name>
     <description>
-        GolfManager
+        골프매니저
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
@@ -20,7 +20,8 @@
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.3" />
     <plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.1" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
-	<plugin name="cordova-plugin-inappbrowser" source="npm" spec="~1.3.0" />
+<!-- 	<plugin name="cordova-plugin-inappbrowser" source="npm" spec="~1.3.0" /> -->
+     	<plugin name="cordova-plugin-inappbrowser"  spec="https://github.com/Shoety/cordova-plugin-inappbrowserxwalk" /> 
 <!-- 
 	<plugin name="cordova-plugin-fcm-config" spec="cordova-plugin-fcm-config"  source="npm"/> -->
 <!-- 	<plugin name="cordova-plugin-firebase" source="npm"/>  -->
