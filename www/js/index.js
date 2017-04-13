@@ -116,10 +116,11 @@ function Exit(){
 
 
 							//ref.addEventListener('exit', function(event){  Exit(); });
-ref.addEventListener( "loadstop", function() {
-    ref.executeScript({ code: "alert( 'hello' );" });
-});
-					
+							/*
+							ref.addEventListener( "loadstop", function() {
+								ref.executeScript({ code: "alert( 'hello' );" });
+							});
+							*/					
 							},1000); 
 
 					}
