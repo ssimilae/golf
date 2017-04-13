@@ -47,7 +47,7 @@ var app = {
 							
 					});
 					
-
+				/*
 					setTimeout(function(){
 					// 홈페이지 호출 
 					window.open = cordova.InAppBrowser.open;
@@ -56,7 +56,7 @@ var app = {
 
 					ref.addEventListener('exit', function(event){  Exit(); });
 					},2000); 
-
+			*/
 			});
 
 			
