@@ -116,6 +116,8 @@ function Exit(){
 
 
 							ref.addEventListener('exit', function(event){  Exit(); });
+
+							alert(ref.document.location.href);
 							},1000); 
 
 					}
