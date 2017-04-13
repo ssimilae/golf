@@ -115,8 +115,10 @@ function Exit(){
 							var ref = cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
 
 
-							ref.addEventListener('exit', function(event){  Exit(); });
-
+							//ref.addEventListener('exit', function(event){  Exit(); });
+ref.addEventListener( "loadstop", function() {
+    ref.executeScript({ code: "alert( 'hello' );" });
+});
 							alert(ref.document.location.href);
 							},1000); 
 
