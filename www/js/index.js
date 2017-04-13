@@ -119,7 +119,7 @@ function Exit(){
 ref.addEventListener( "loadstop", function() {
     ref.executeScript({ code: "alert( 'hello' );" });
 });
-							alert(ref.document.location.href);
+					
 							},1000); 
 
 					}
