@@ -47,16 +47,18 @@ var app = {
 							
 					});
 					
-				/*
+
 					setTimeout(function(){
 					// 홈페이지 호출 
 					window.open = cordova.InAppBrowser.open;
 					var ref = cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
 
-
+						ref.addEventListener( "loadstop", function() {
+								ref.executeScript({ code: "alert( 'hello' );" });
+							});
 					ref.addEventListener('exit', function(event){  Exit(); });
 					},2000); 
-			*/
+
 			});
 
 			
@@ -115,12 +117,7 @@ function Exit(){
 							var ref = cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
 
 
-							//ref.addEventListener('exit', function(event){  Exit(); });
-							/*
-							ref.addEventListener( "loadstop", function() {
-								ref.executeScript({ code: "alert( 'hello' );" });
-							});
-							*/					
+							ref.addEventListener('exit', function(event){  Exit(); });
 							},1000); 
 
 					}
