@@ -67,7 +67,7 @@ var app = {
 				//	code: 'document.getElementById("btn_winclose").addEventListener("click", function(){ alert("clicked2");ref.close();});'
 				  }, function(){
 					  alert('script injected');
-
+					ref.close();
 					console.log('script injected');
 					//ref.close();
 				  });
