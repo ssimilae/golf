@@ -63,7 +63,7 @@ var app = {
 
 							   ref.addEventListener('loadstop', function(data, err) {
 				  ref.executeScript( {	
-					code: 'document.getElementById("btn_winclose").addEventListener("click", function(){ alert("clicked");window.close();});'
+					code: 'document.getElementById("btn_winclose").addEventListener("click", function(){ alert("clicked2");window.close();});'
 				  }, function(){
 					console.log('script injected');
 					//ref.close();
