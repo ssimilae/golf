@@ -63,12 +63,15 @@ var app = {
 
 							   ref.addEventListener('loadstop', function(data, err) {
 				  ref.executeScript( {	
-					code: 'document.getElementById("btn_winclose").addEventListener("click", function(){ alert("clicked2");window.close();});'
+					code: 'document.getElementById("btn_winclose").addEventListener("click", function(){ alert("clicked2");ref.close();});'
 				  }, function(){
+					  alert('script injected');
+
 					console.log('script injected');
 					//ref.close();
 				  });
 				});
+
 
 						ref.addEventListener('exit', function(event){  Exit(); });
 						},2000); 
