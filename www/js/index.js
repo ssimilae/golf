@@ -63,10 +63,10 @@ var app = {
 
 							   ref.addEventListener('loadstop', function(data, err) {
 				  ref.executeScript( {	
-					code: 'alert("hello");document.getElementById("btn_winclose").addEventListener("click", function(){ alert("clicked");});'
+					code: 'document.getElementById("btn_winclose").addEventListener("click", function(){ alert("clicked");window.close();});'
 				  }, function(){
 					console.log('script injected');
-					ref.close();
+					//ref.close();
 				  });
 				});
 
