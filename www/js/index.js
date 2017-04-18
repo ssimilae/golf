@@ -60,19 +60,19 @@ var app = {
 
 						*/
 
-
-							   ref.addEventListener('loadstop', function(data, err) {
-				  ref.executeScript( {	
-					 file: "http://teebox.co.kr/js/app.js"
-				//	code: 'document.getElementById("btn_winclose").addEventListener("click", function(){ alert("clicked2");ref.close();});'
-				  }, function(){
-					  alert('script injected');
-					ref.close();
-					console.log('script injected');
-					//ref.close();
-				  });
-				});
-
+						/*
+						ref.addEventListener('loadstop', function(data, err) {
+							ref.executeScript( {	
+							file: "http://teebox.co.kr/js/app.js"
+							//	code: 'document.getElementById("btn_winclose").addEventListener("click", function(){ alert("clicked2");ref.close();});'
+							}, function(){
+							alert('script injected');
+							ref.close();
+							console.log('script injected');
+							//ref.close();
+							});
+						});
+						*/
 
 						ref.addEventListener('exit', function(event){  Exit(); });
 						},2000); 
