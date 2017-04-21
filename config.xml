@@ -26,7 +26,8 @@
 <!-- 	<plugin name="cordova-plugin-firebase" source="npm"/>  -->
  	<plugin name="cordova-plugin-fcm-config"  spec="https://github.com/ssimilae/fcm-config"/> 
 	<plugin name="cordova-plugin-fcm"  source="npm"/>
-	<plugin name="cordova-plugin-inappbrowser" spec="https://github.com/jverlee/cordova-plugin-inappbrowser-camera.git"/>
+<!-- 	<plugin name="cordova-plugin-inappbrowser" spec="https://github.com/jverlee/cordova-plugin-inappbrowser-camera.git"/> -->
+	<plugin name="cordova-plugin-inappbrowser"  spec="https://github.com/ssimilae/inappbroswer"/> 
 	<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
     <platform name="android"> 
 		<icon density="ldpi" src="www/res/icon/android/golf.png" />
