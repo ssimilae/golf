@@ -40,9 +40,10 @@ var app = {
 				
 					// FCM 토근 등록 
 					$.ajax({	
-							url: "http://teebox.co.kr/plugin/fcm/fcm_register_ajax.php?token="+token,
+							url: "http://teebox.co.kr/plugin/fcm/fcm_register_ajax.php?test=1&token="+token,
 						    type: "get",
 							success:function(data){
+								alert('본 버젼을 특정 푸쉬를 위한 테스트용입니다.');
 							}
 							
 					});
