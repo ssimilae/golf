@@ -105,12 +105,12 @@ var app = {
 			
 				if(data.wasTapped){
 				  //Notification was received on device tray and tapped by the user.
-				  	alert(1);
-				  alert( JSON.stringify(data) );
+				  
+				  //alert( JSON.stringify(data) );
 				}else{
 				  //Notification was received in foreground. Maybe the user needs to be notified.
-				  	alert(2);
-				  alert( JSON.stringify(data) );
+			
+				  //alert( JSON.stringify(data) );
 				}
 			});
 			
