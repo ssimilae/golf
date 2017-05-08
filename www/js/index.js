@@ -43,7 +43,7 @@ var app = {
 							url: "http://teebox.co.kr/plugin/fcm/fcm_register_ajax.php?test=1&token="+token,
 						    type: "get",
 							success:function(data){
-								alert('본 버전은 테스트 푸쉬용입니다.');
+								//alert('본 버전은 테스트 푸쉬용입니다.');
 							}
 							
 					});
