@@ -123,7 +123,7 @@ var app = {
 		}
 		catch (e)
 		{
-			alert(e.toString());
+			//alert(e.toString());
 		}
       
     },
