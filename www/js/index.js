@@ -102,7 +102,10 @@ var app = {
 			
 		
 			FCMPlugin.onNotification(function(data){
-			
+				
+				alert(data.notification.body);
+
+				/*
 				if(data.wasTapped){
 				  //Notification was received on device tray and tapped by the user.
 				
@@ -118,6 +121,7 @@ var app = {
 				 
 				
 				}
+				*/
 			});
 			
 
