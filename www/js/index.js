@@ -102,32 +102,21 @@ var app = {
 			
 		
 			FCMPlugin.onNotification(function(data){
-				
-
+			
 				if(data.wasTapped){
 				  //Notification was received on device tray and tapped by the user.
 				
-					//alert( JSON.stringify(data) );
-					//var push =  JSON.stringify(data);
+					alert( JSON.stringify(data) +"1");
 			 
 			
 				}else{
 				  //Notification was received in foreground. Maybe the user needs to be notified.
 				
-				 // alert( JSON.stringify(data) );
-				  //var push =  JSON.stringify(data);
+					alert( JSON.stringify(data) +"2");
 				 
 				
 				}
-			}, 
-			function(msg){
-			 alert( "Success callback " +msg);
-			},
-			function(err){
-			  alert( "Error callback " +err );
-			 }
-			
-			);
+			});
 			
 
 
