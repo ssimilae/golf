@@ -35,7 +35,7 @@ var app = {
     onDeviceReady: function() {
 		try
 		{
- 
+			var ref;
 			FCMPlugin.getToken(function(token){ 
 				
 					// FCM 토근 등록 
@@ -52,7 +52,7 @@ var app = {
 					setTimeout(function(){
 					// 홈페이지 호출 
 					window.open = cordova.InAppBrowser.open;
-					var ref = cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
+					 ref = cordova.InAppBrowser.open('http://teebox.co.kr', '_blank', 'location=no,toolbar=no,zoom=no');
 						
 						/*
 						ref.addEventListener( "loadstop", function() {
