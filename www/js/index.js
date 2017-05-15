@@ -107,14 +107,14 @@ var app = {
 				  //Notification was received on device tray and tapped by the user.
   
 					//alert( JSON.stringify(data) +"1");
-					alert("고객님께서 골프장명 양도(조인)신청하셨습니다.\n 알림을 확인하세요.");
-					ref = cordova.InAppBrowser.open('http://teebox.co.kr/mypage.php', '_blank', 'location=no,toolbar=no,zoom=no');
+					//alert("고객님께서 골프장명 양도(조인)신청하셨습니다.\n 알림을 확인하세요.");
+					//ref = cordova.InAppBrowser.open('http://teebox.co.kr/mypage.php', '_blank', 'location=no,toolbar=no,zoom=no');
 			
 				}else{
 			 
 					//alert( JSON.stringify(data) +"2");
-					alert("고객님께서 골프장명 양도(조인)신청하셨습니다.\n 알림을 확인하세요.");
-					ref = cordova.InAppBrowser.open('http://teebox.co.kr/mypage.php', '_blank', 'location=no,toolbar=no,zoom=no');
+					//alert("고객님께서 골프장명 양도(조인)신청하셨습니다.\n 알림을 확인하세요.");
+					//ref = cordova.InAppBrowser.open('http://teebox.co.kr/mypage.php', '_blank', 'location=no,toolbar=no,zoom=no');
   
 				} 
 			});
