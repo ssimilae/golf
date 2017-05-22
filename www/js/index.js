@@ -117,7 +117,7 @@ var app = {
 					window.open = cordova.InAppBrowser.open;
 					alert("고객님께서 골프장명 양도(조인)신청하셨습니다.\n 알림을 확인하세요.");
 					var vref = cordova.InAppBrowser.open('http://teebox.co.kr/mypage.php', '_blank', 'location=no,toolbar=no,zoom=no');
-					*/s
+					*/
 				} 
 			});
 			
