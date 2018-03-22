@@ -25,8 +25,8 @@
 <!-- 
 	<plugin name="cordova-plugin-fcm-config" spec="cordova-plugin-fcm-config"  source="npm"/> -->
 <!-- 	<plugin name="cordova-plugin-firebase" source="npm"/>  -->
-<!--  	<plugin name="cordova-plugin-fcm-config"  spec="https://github.com/ssimilae/fcm-config"/> 
- 		<plugin name="cordova-plugin-fcm" spec="https://github.com/ssimilae/fcm"/>  -->
+ 	<plugin name="cordova-plugin-fcm-config"  spec="https://github.com/ssimilae/fcm-config"/> 
+	<plugin name="cordova-plugin-fcm" spec="https://github.com/ssimilae/fcm"/> 
 <!-- 	<plugin name="cordova-plugin-inappbrowser" spec="https://github.com/jverlee/cordova-plugin-inappbrowser-camera.git"/> -->
 	<plugin name="cordova-plugin-inappbrowser"  spec="https://github.com/ssimilae/inappbroswer"/> 
 	<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
