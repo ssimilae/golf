@@ -8,6 +8,7 @@
         PhoneGap Team
     </author>
 
+
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
